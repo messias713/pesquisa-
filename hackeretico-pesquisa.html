@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Pesquisa Avançada</title>
+</head>
+<body>
+  <h1>HackerÉtico \/\/</h1>
+  
+  <form id="formPesquisa">
+    <input type="text" id="inputPesquisa" placeholder="Digite sua pesquisa avançada aqui">
+    
+    <!-- Tipo de pesquisa -->
+    <select id="tipoPesquisa">
+      <option value="texto">Texto</option>
+      <option value="data">Data</option>
+      <option value="numero">Número</option>
+    </select>
+    
+    <!-- Campos extras de filtro -->
+    <div>
+      <h3>Filtros:</h3>
+      <input type="text" id="filtroTexto" placeholder="Filtro de texto">
+      <input type="date" id="filtroData">
+      <input type="number" id="filtroNumero">
+    </div>
+    
+    <button type="submit" onclick="pesquisaAvancada(event)">Pesquisar</button>
+  </form>
+  
+  <script>
+    // Função para pesquisa avançada
+    function pesquisaAvancada(e) {
+      e.preventDefault();
+      
+      // Captura o valor do input e os filtros selecionados
+      let inputValor = document.getElementById('inputPesquisa').value;
+      let tipoPesquisa = document.getElementById('tipoPesquisa').value;
+      
+      let filtros = {
+        texto: document.getElementById('filtroTexto').value,
+        data: document.getElementById('filtroData').value,
+        numero: document.getElementById('filtroNumero').value
+      };
+      
+      // Simulação de pesquisa avançada
+      // Aqui você pode adicionar sua lógica de pesquisa avançada
+      let resultados = realizarPesquisaAvancada(inputValor, tipoPesquisa, filtros);
+      
+      // Exibir os resultados da pesquisa
+      console.log('Resultados da pesquisa:', resultados);
+    }
+    
+    // Função para simular a pesquisa avançada
+    function realizarPesquisaAvancada(valor, tipo, filtros) {
+      // Aqui você pode implementar a lógica de pesquisa avançada com base nos parâmetros fornecidos
+      // Por enquanto, vamos apenas simular retornando os valores para demonstração
+      return {
+        valorPesquisado: valor,
+        tipoPesquisa: tipo,
+        filtros: filtros
+      };
+    }
+  </script>
+  
+  <pre>
+  \/\/.document.txt
+  </pre>
+</body>
+</html>
+
