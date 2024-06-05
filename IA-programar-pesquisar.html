@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Programação de IA em JavaScript</title>
+</head>
+<body>
+<h1>Programação de IA em JavaScript</h1>
+<p>Insira um link para ser exibido como clicável:<br>Para abrir o site que quer.</p>
+<textarea id="inputLink" rows="1" cols="50"></textarea>
+<button onclick="exibirLink()">Exibir Link</button>
+<p>Resultado:</p>
+<p id="resultado"></p>
+
+<p>Realize uma pesquisa avançada na web:</p>
+<textarea id="inputPesquisa" rows="4" cols="50"></textarea>
+<button onclick="pesquisarWeb()">Pesquisar</button>
+<p>Resultado da Pesquisa:</p>
+<p id="resultadoPesquisa"></p>
+
+<script>
+function exibirLink() {
+    var link = document.getElementById('inputLink').value;
+    document.getElementById('resultado').innerHTML = '<a href="' + link + '" target="_blank">' + link + '</a>';
+}
+
+function pesquisarWeb() {
+    var termoPesquisa = document.getElementById('inputPesquisa').value;
+    var urlPesquisa = 'https://www.duckduckgo.com/?q=' + encodeURIComponent(termoPesquisa);
+    document.getElementById('resultadoPesquisa').innerHTML = 'Clique <a href="' + urlPesquisa + '" target="_blank">aqui</a> para ver os resultados da pesquisa.';
+}
+</script>
+</body>
+</html>
+
