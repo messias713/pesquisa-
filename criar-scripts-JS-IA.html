@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Programação de IA em JavaScript</title>
+</head>
+<body>
+<h1>Programação de IA em JavaScript</h1>
+<p>Insira um script JavaScript para ser processado pela IA:</p>
+<textarea id="inputScript" rows="4" cols="50"></textarea>
+<button onclick="executarScript()">Executar Script</button>
+<p>Resultado:</p>
+<p id="resultado"></p>
+
+<script>
+function executarScript() {
+    var script = document.getElementById('inputScript').value;
+    var resultado = IA(script);
+    document.getElementById('resultado').innerHTML = resultado;
+}
+
+function IA(script) {
+    try {
+        return eval(script);
+    } catch (error) {
+        return 'Erro ao executar o script: ' + error;
+    }
+}
+</script>
+</body>
+</html>
+-------------------------
+scripts contas
+
+// Exemplo de script JavaScript para calcular a média de uma lista de números
+var numeros = [5, 10, 15, 20, 25];
+var soma = numeros.reduce((total, numero) => total + numero, 0);
+var media = soma / numeros.length;
+media.toString();
+
+---------------------
+// Exemplo de script JavaScript para manipulação de strings
+var texto = "Olá, mundo!";
+var maiusculas = texto.toUpperCase();
+var invertido = texto.split('').reverse().join('');
+var resultado = "Texto em maiúsculas: " + maiusculas + "<br>Texto invertido: " + invertido;
+resultado;
+---------------------------
+// Exemplo de script JavaScript para criar um objeto
+var pessoa = {
+  nome: "João",
+  idade: 30,
+  profissao: "Engenheiro"
+};
+pessoa;
+------------------------------------------------
+// Exemplo de script JavaScript para criar texto
+var texto = "Este é um texto criado dinamicamente.";
+texto;
+-------------------------------
+// Exemplo de script JavaScript para inserir HTML, imagem e vídeo
+var html = "<h2>Exemplo de HTML Dinâmico</h2><img src='https://media.tenor.com/qAMFIpIXKS0AAAAC/woman.gif' alt='Imagem'><br><iframe width='718' height='404' src='https://www.youtube.com/embed/Xq5_xLTTAzo' title='ABBA - The Winner Takes It All - Lyric Video - Favourite Performance' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>";
+html;
+
+
