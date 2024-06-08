@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+  h1{color:purple;
+  background-color:pink;
+  font-size:20px;
+  }
+  </style>
+  <title>Simplificando JavaScript</title>
+</head>
+<body>
+  <h1>Programando HTML em JavaScript</h1>
+  <div id="exemplo"></div>
+
+  <script>
+    const numeros = [1, 2, 3, 4, 5];
+    const pessoa = { nome: "João", idade: 30, cidade: "São Paulo" };
+    const resultado = 10 + 5;
+
+    const elemento = document.getElementById("exemplo");
+    elemento.innerHTML = `
+      <p>Números: ${numeros.join(", ")}</p>
+      <p>Pessoa: Nome - ${pessoa.nome}, Idade - ${pessoa.idade}, Cidade - ${pessoa.cidade}</p>
+      <p>Resultado da operação matemática: ${resultado}</p>
+    `;
+
+    function adicionarElementos() {
+      elemento.innerHTML += `
+        <h2>Novos Elementos Adicionados</h2>
+        <img src="https://media.tenor.com/qFiYENJcFEwAAAAC/disney-periwinkle.gif" alt="Descrição da Imagem">
+        <iframe width="539" height="404" src="https://www.youtube.com/embed/CSZlIVP9u0Y" title="THY WORD - MICHAEL W. SMITH &amp; AMY GRANT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <details>
+          <summary>Detalhes</summary>
+          <p><h1>Seja feliz por favor.</h1><img src="https://media.tenor.com/9CJ5sLOP-FcAAAAC/fairy-moon.gif"width="100%"><br><iframe width="718" height="404" src="https://www.youtube.com/embed/E8bCwmZp5W8" title="Abba &quot;The Winner Takes It All &quot; (1980) HQ Audio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+        </details>
+      `;
+    }
+
+    adicionarElementos();
+  </script>
+</body>
+</html>
+
+---------------------------------------------------------------
+<pre>
+PROGRAMAR javascript
+simplificado.
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo</title>
+</head>
+<body>
+  <div id="output"></div>
+
+  <script>
+    const nome = "Alice";
+    const idade = 25;
+
+    const frase = `Olá, meu nome é ${nome} e tenho ${idade} anos.`;
+
+    document.getElementById("output").innerText = frase;
+  </script>
+</body>
+</html>
+
+</pre>
