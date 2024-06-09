@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa JavaScript</title>
+</head>
+<body>
+  <pre id="output"></pre>
+  
+  <script>
+    // Coloque o código JavaScript aqui
+    function print(data) {
+      if (typeof data === 'object') {
+        document.getElementById("output").innerHTML += JSON.stringify(data, null, 2) + "<br>";
+      } else {
+        document.getElementById("output").innerHTML += data + "<br>";
+      }
+    }
+
+    print("Olá, mundo!");
+    print(23 * 23);
+    print("Eu sou a Maria<br><img src='https://media.tenor.com/fuNOSh0i6NgAAAAC/good-morning.gif'>");
+
+    // Exemplo de uso com objetos, arrays e maps
+    const obj = { name: 'Alice', age: 30 };
+    const arr = [1, 2, 3, 4, 5];
+    const map = new Map([[1, 'one'], [2, 'two'], [3, 'three']]);
+
+    print(obj);
+    print(arr);
+    print(map);
+  </script>
+</body>
+</html>
+-----------------------------------
+<pre>
+jogo da velha print js
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jogo da Velha</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid black;
+    }
+    th, td {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+    }
+  </style>
+</head>
+<h1>jogo da velha</h1>
+<body>
+  <table id="board">
+    <tr>
+      <td onclick="play(0, 0)"></td>
+      <td onclick="play(0, 1)"></td>
+      <td onclick="play(0, 2)"></td>
+    </tr>
+    <tr>
+      <td onclick="play(1, 0)"></td>
+      <td onclick="play(1, 1)"></td>
+      <td onclick="play(1, 2)"></td>
+    </tr>
+    <tr>
+      <td onclick="play(2, 0)"></td>
+      <td onclick="play(2, 1)"></td>
+      <td onclick="play(2, 2)"></td>
+    </tr>
+  </table>
+  
+  <pre id="output"></pre>
+  
+  <script>
+    // Função print para exibir o tabuleiro
+    function print(data) {
+      if (typeof data === 'object') {
+        document.getElementById("output").innerHTML += JSON.stringify(data, null, 2) + "<br>";
+      } else {
+        document.getElementById("output").innerHTML += data + "<br>";
+      }
+    }
+
+    // Função para inicializar o tabuleiro
+    function initializeBoard() {
+      return [
+        [' ', ' ', ' '],
+        [' ', ' ', ' '],
+        [' ', ' ', ' ']
+      ];
+    }
+
+    // Função para exibir o tabuleiro
+    function displayBoard(board) {
+      let table = document.getElementById('board');
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          table.rows[i].cells[j].textContent = board[i][j];
+        }
+      }
+    }
+
+    // Função para verificar o vencedor
+    function checkWinner(board, player) {
+      // Verifica linhas, colunas e diagonais
+      for (let i = 0; i < 3; i++) {
+        if (board[i][0] === player && board[i][1] === player && board[i][2] === player) {
+          return true;
+        }
+        if (board[0][i] === player && board[1][i] === player && board[2][i] === player) {
+          return true;
+        }
+      }
+      if ((board[0][0] === player && board[1][1] === player && board[2][2] === player) ||
+          (board[0][2] === player && board[1][1] === player && board[2][0] === player)) {
+        return true;
+      }
+      return false;
+    }
+
+    // Inicializa o tabuleiro
+    let board = initializeBoard();
+    let currentPlayer = 'X';
+    let gameOver = false;
+
+    // Função para jogar
+    function play(row, col) {
+      if (!gameOver && board[row][col] === ' ') {
+        board[row][col] = currentPlayer;
+        displayBoard(board);
+        if (checkWinner(board, currentPlayer)) {
+          print(`Jogador ${currentPlayer} venceu!`);
+          gameOver = true;
+        } else {
+          currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
+        }
+      }
+    }
+
+    // Exibe o tabuleiro inicial
+    displayBoard(board);
+  </script>
+</body>
+</html>
+
+</pre>
