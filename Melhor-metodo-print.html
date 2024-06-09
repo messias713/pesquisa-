@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa JavaScript</title>
+</head>
+<body>
+  <pre id="output"></pre>
+  <p id="demo"></p>
+  <script>
+    // Coloque o código JavaScript aqui
+    function print(data) {
+      if (typeof data === 'object') {
+        document.getElementById("output").innerHTML += JSON.stringify(data, null, 2) + "<br>";
+      } else {
+        document.getElementById("output").innerHTML += data + "<br>";
+      }
+    }
+
+    print("Olá, mundo!");
+    print(23 * 23);
+    print("Eu sou a Maria<br><img src='https://media.tenor.com/fuNOSh0i6NgAAAAC/good-morning.gif'>");
+
+   
+   function print(){
+   return '["maria","maria","maria"]';
+   }
+   document.getElementbyId('demo').innerHTML=print();
+  </script>
+</body>
+</html>
