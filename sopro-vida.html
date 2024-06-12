@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sopro de Vida</title>
+<style>
+    #imagem {
+        width: 300px;
+        transition: transform 2s;
+    }
+    h1{
+    color:blue;
+    background-color:pink;
+    <font-size:25px;
+    }
+</style>
+</head>
+<h1>O segredo! Sopro vida.</h1>
+<body>
+<img id="imagem" src="https://avatars.mds.yandex.net/i?id=730b7cffd59ec9a14243c1e79e8b3f553888e82d-12487070-images-thumbs&n=13" alt="Imagem Estática">
+<p id="frase"></p>
+
+<script>
+    const imagem = document.getElementById('imagem');
+    const frase = document.getElementById('frase');
+
+    imagem.addEventListener('mouseover', () => {
+        imagem.style.transform = 'scale(1.3)';
+        frase.textContent = 'Despertei para a vida espiritual eterna';
+    });
+
+    imagem.addEventListener('mouseout', () => {
+        imagem.style.transform = 'scale(1)';
+        frase.textContent = '';
+    });
+</script>
+</body>
+</html>
+
