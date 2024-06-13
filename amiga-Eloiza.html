@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voando Na fé em jesus!</title>
+<style>
+#container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.image {
+    position: absolute;
+    top: 0;
+    left: -200px; /* Inicia fora da tela à esquerda */
+    animation: fly 5s linear infinite;
+}
+
+@keyframes fly {
+    from {
+        left: -200px;
+    }
+    to {
+        left: 100%; /* Termina fora da tela à direita */
+    }
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+}
+pre{
+ color:black;
+ background-color:#FF7F50;
+ font-size:20;
+}
+</style>
+</head>
+<center>
+<h1 style="color:purple;">Jesus o salvador.<br> Seja feliz por favor.</h1></center>
+<body>
+<div id="container">
+    <img src="https://z-m-scontent-lis1-1.xx.fbcdn.net/v/t31.18172-8/13988275_626930010822907_3960726671769250892_o.jpg?_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeERvBmvS0IslwK9ZU0eWDGxxgK8Hu9EKe3GArwe70Qp7Z4FUvdeP51VabjLF57pG1Ug1KoniOr1PPidGqgxkZbT&_nc_ohc=fm26Ku5LRVMQ7kNvgG-7k3y&_nc_ad=z-m&_nc_cid=1272&_nc_ht=z-m-scontent-lis1-1.xx&oh=00_AYDpqdQG2BHCZYASrs6LnnndSgAbC_6EaDHVC8d1q7S4_w&oe=66924D0B" class="image" style="animation-duration: 5s;">
+    <img src="https://yandex-images.clstorage.net/Q9SC73h71/ca9be6wIwUh/6hRp8kOJow2_3WUT7XkgDgrYvKDDG7MKkKJpznYBGceuGzhNrqFZYu66lzENGd6uJgFsgcTcuNuwJ6mx57VAZPoCaXTWGHcdv1l11C74cI5PXH1gDZJowVloscM9DcDIKVvoGDnyXPN-4YsgDlXGMPMXsFcQU6kaZTI5Nv-qheDihjCiA0RjhPUXo4kmsumTghF2oEiZbcUd4viNNE9Gjq_aqB39Ock7MSgOPkgbz3F7k34XFFioFuE8P_3-rEmlJ0vzIwAI6w05mOABJv6m1AgbtCBG2aAIF6u0jrsCjwUvn2WTOnEMsjWlivqNUgt5f9331xPWJhYncvG58SCD7u5EeeuCzejMNtFqiqo4b14OmvysQp-gyJgl-IR7TgSBrZ8i0jr6wz5wZwLxzdHCuHsSOxTQ1GxXL7Q0tLfrCObsQrirj0fvgr9TaI0jfeAbjNP1rIkZZESVYXhHNwgAQ2eZo1ow_Ua0cqjJswzdzPk20fZXVFzlmOG_sDW67YEsLU7y7IaN4M2z3avE7T5h0AmWvuAOHiLL3eF2TTqPQUouGqAV8nVGtPjjCD5G1UFwe9P8n5FbqVgt9P3-M-ZNKSqG_iPDjyjCc5WiSit66VaBmnshjFBtgdxpe4P3DkhLb59lnTX6zr1-ZgqxQtDHM7Ob-pue0yHXaTv8MPimhCAsRLCth45jCPITYMUisW4YBF584U8Trs-Xqf-GMQeDwqMeKtG-tU_7cWyMc0YRiTLzmvBS31Xhl6f5fz0zbESm40px549Ab8s-3GsIJPPgEw-ZdigAUCsCH-I2SbTGRsokl2Eae3rP8v2sxTLFnYf1c15-FJ8QJdPudLa992VFqC1CtyAHjaDCuZBsQmMxYtwEGnNrg5SoAhyqMEy7SoyJqx2oVfQ1jnFz6gD2h5LBNnace5oXmeZYqHJ4M_8lC6EvQjvpSYAnjTJV5cXgtWSfgNH8oEMRIoubJP-PfA" class="image" style="animation-duration: 6s;">
+    <img src="https://z-m-scontent-lis1-1.xx.fbcdn.net/v/t1.18169-9/14102689_991083951004328_1822964799454365271_n.jpg?stp=c0.56.206.206a_dst-jpg_p206x206&_nc_cat=103&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFVa_08aiVJoeyNDpilgQE9QFVceNB_xEZAVVx40H_ERq3dEcteqyINzBwXFmZMnfRb8FPGj7UTLYnKBbPFJ6ua&_nc_ohc=fvrHgs4XbMMQ7kNvgF5yG32&_nc_ad=z-m&_nc_cid=1272&_nc_ht=z-m-scontent-lis1-1.xx&oh=00_AYDfDp9pmaBrCosfvn_YSy_fOVijT0X1EPc5viFi_oihlg&oe=669258A9" class="image" style="animation-duration: 7s;">
+    <div class="caption">Com JESUS o salvador!<br>Seja feliz por favor</div>
+</div>
+
+<script>
+// Adiciona um evento de carregamento para começar a voar as imagens
+document.addEventListener("DOMContentLoaded", function() {
+    const images = document.querySelectorAll(".image");
+    images.forEach(function(image, index) {
+        // Adiciona um delay diferenciado para cada imagem
+        image.style.animationDelay = 1 + index + "s";
+    });
+});
+</script>
+<pre>
+Querida Eloiza,
+
+Que a luz divina do Universo ilumine o seu caminho,
+ trazendo amor, paz e harmonia ao seu coração.
+  Que a fé possa fortalecer sua alma
+   em momentos de desafios e incertezas,
+    pois sabemos que a fé
+     é a certeza das coisas que se esperam
+      e a convicção das coisas que não se veem.
+
+Que a presença de Deus esteja sempre ao seu lado,
+ guiando seus passos,
+  inspirando seus pensamentos
+   e fortalecendo sua determinação.
+    Lembre-se de que, mesmo nos momentos mais difíceis,
+     você nunca está sozinha,
+      pois a presença do amor divino é constante em sua vida.
+
+Confie em si mesma, confie em Deus,
+ e saiba que todas as adversidades
+  podem ser superadas com fé e esperança.
+   Que sua jornada seja abençoada
+    e que você possa enfrentar
+     os desafios da vida com coragem,
+      sabedoria e fé inabalável.
+
+Que a paz de Deus, que excede todo entendimento,
+ esteja em seu coração
+  e que a proteção divina envolva você em todos os momentos.
+   Que a sua fé se fortaleça a cada dia,
+    tornando-se uma fonte de amor,
+     luz e paz para todos ao seu redor.
+
+Que a presença do Espírito Santo te guie,
+ te console e te fortaleça,
+  trazendo cura, renovação e bênçãos sem medida.
+   Confie no poder da oração,
+    na força da fé e no amor incondicional de Deus,
+     pois Ele nunca falha e sempre está presente,
+      cuidando de você com carinho e amor.
+
+Que a paz de Cristo esteja sempre com você,
+ minha querida amiga Eloiza.
+  Que a fé seja a sua luz,
+   a sua força e a sua esperança,
+    guiando seus passos e preenchendo
+     sua vida com bênçãos incontáveis.
+
+Com amor, fé e gratidão,
+
+[Um espírito amigo]
+</pre>
+</body>
+</html>
